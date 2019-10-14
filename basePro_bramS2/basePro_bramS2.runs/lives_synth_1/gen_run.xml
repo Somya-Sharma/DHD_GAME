@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="lives_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1571055004">
+  <File Type="PA-TCL" Name="lives.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="lives_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="lives_reports.tcl"/>
+  <File Type="RDS-RDS" Name="lives.vds"/>
+  <File Type="RDS-UTIL" Name="lives_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="lives_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="lives.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="lives_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="lives_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lives">
+    <File Path="$PSRCDIR/sources_1/ip/lives/lives.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="lives"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/lives">
+    <File Path="$PSRCDIR/sources_1/ip/lives/lives.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="lives"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

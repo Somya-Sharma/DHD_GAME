@@ -1,0 +1,254 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Mon Oct 14 21:31:21 2019
+| Host         : DESKTOP-TF2ORNB running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   184 |
+| Unused register locations in slices containing registers |   206 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |           18 |
+|      4 |            3 |
+|      8 |            3 |
+|     10 |            1 |
+|     12 |            2 |
+|     14 |            3 |
+|    16+ |          154 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            2314 |          403 |
+| No           | No                    | Yes                    |              60 |           16 |
+| No           | Yes                   | No                     |            2170 |          307 |
+| Yes          | No                    | No                     |            5212 |          860 |
+| Yes          | No                    | Yes                    |               4 |            1 |
+| Yes          | Yes                   | No                     |             522 |           85 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+---------------------------------------+--------------------------------------------+------------------+----------------+
+|             Clock Signal            |             Enable Signal             |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++-------------------------------------+---------------------------------------+--------------------------------------------+------------------+----------------+
+|  mouse/bit_count_reg[0]_LDC_i_1_n_0 |                                       | mouse/bit_count_reg[0]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/bit_count_reg[3]_LDC_i_1_n_0 |                                       | mouse/bit_count_reg[3]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/bit_count_reg[2]_LDC_i_1_n_0 |                                       | mouse/bit_count_reg[2]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/bit_count_reg[1]_LDC_i_1_n_0 |                                       | mouse/bit_count_reg[1]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/f4cmd_reg[0]_LDC_i_1_n_0     |                                       | dbp/clrp                                   |                1 |              2 |
+|  mouse/ps2din_reg_LDC_i_1_n_0       |                                       | mouse/ps2din_reg_LDC_i_2_n_0               |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[1]_LDC_i_1_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[1]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[2]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[3]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[0]_LDC_i_2_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[2]_LDC_i_1_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[3]_LDC_i_1_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/bit_count_reg[0]_LDC_i_1_n_0         |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/f4cmd_reg[0]_LDC_i_1_n_0             |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/ps2din_reg_LDC_i_2_n_0               |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | mouse/ps2din_reg_LDC_i_1_n_0               |                1 |              2 |
+|  mouse/sndflg_reg_n_0               |                                       | dbp/clrp                                   |                1 |              2 |
+|  clk_wiz/inst/clk_25                | mouse/byte3[1]_i_1_n_0                |                                            |                1 |              4 |
+|  clk_wiz/inst/clk_25                | mouse/shift2                          |                                            |                2 |              4 |
+|  ball3/game_stop                    | L0/lives[1]_i_1_n_0                   | clear_IBUF                                 |                1 |              4 |
+|  clk_wiz/inst/clk_25                | mouse/FSM_sequential_state[3]_i_1_n_0 | dbp/clrp                                   |                2 |              8 |
+|  clk_wiz/inst/clk_25                | mouse/bit_count1[3]_i_1_n_0           | dbp/clrp                                   |                2 |              8 |
+|  clk_wiz/inst/clk_out1              |                                       | player/player_ystart_delta_reg[16]_i_1_n_0 |                3 |              8 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[683]_0                    |                1 |             10 |
+|  clk_wiz/inst/clk_25                | mouse/bit_count3[5]_i_1_n_0           | dbp/clrp                                   |                3 |             12 |
+|  f1/out[0]                          |                                       |                                            |                3 |             12 |
+|  clk_wiz/inst/clk_out1              | vgac/r_addr_msb_reg[9]_0[0]           |                                            |                4 |             14 |
+|  clk_wiz/inst/clk_out1              | vgac/r_addr_msb_reg[9]_3[0]           |                                            |                4 |             14 |
+|  clk_wiz/inst/clk_out1              | vgac/r_addr_msb_reg[9]_2[0]           |                                            |                3 |             14 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[256]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[112]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[136]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[392]_0                  |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[432]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[440]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[280]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[448]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[456]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[144]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[104]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[400]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[40]                     |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[320]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[464]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[472]                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[208]_0                  |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[416]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[480]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[232]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[288]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[488]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[160]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[248]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[200]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[48]                     |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[496]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[168]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[504]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[336]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[376]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[152]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[176]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[240]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[304]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[368]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[312]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[128]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[264]_0                  |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[608]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[648]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[560]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[544]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[592]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[72]                     |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[600]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[656]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[664]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[624]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[584]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[632]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[512]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[568]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[640]_0                  |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[552]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[536]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[56]                     |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[64]                     |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[672]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[528]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[616]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[576]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[520]_0                  |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[80]                     |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[88]_0                   |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[96]                     |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[696]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[688]_0                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[704]_0                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[712]_0                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[720]_0                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[744]_0                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[736]_0                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[728]_0                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[760]_1                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[752]_0                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[815]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[783]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[791]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[799]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[775]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[807]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[823]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[887]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[847]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[855]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[831]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[871]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[879]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[839]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[863]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[903]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[8]_0                      |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[895]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[927]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[911]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[919]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[935]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[943]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[999]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[951]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[975]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[991]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[983]_0                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[959]_0                    |                5 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[967]_0                    |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[0]_0                      |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[1015]_0                   |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[1007]_0                   |                4 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[1023]_0                   |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[16]_0                     |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/w_data0_reg[24]_0                     |                3 |             16 |
+|  clk_wiz/inst/clk_out1              | vgac/refr_tick                        |                                            |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[216]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[328]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[352]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[272]                    |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[360]                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[344]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[408]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[192]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[424]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[120]                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[184]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[224]                    |                1 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[296]                    |                3 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[32]_0                   |                2 |             16 |
+|  clk_wiz/inst/clk_out1              |                                       | player/w_data0_reg[384]                    |                2 |             16 |
+|  clk_wiz/inst/clk_25                | mouse/count[8]_i_1_n_0                | dbp/clrp                                   |                4 |             18 |
+|  clk_wiz/inst/clk_25                |                                       |                                            |                6 |             18 |
+|  clk_wiz/inst/clk_25                | mouse/shift1[10]_i_1_n_0              | dbp/clrp                                   |                4 |             22 |
+|  clk_wiz/inst/clk_out1              | vgac/r_addr_msb_reg[9]_5[0]           |                                            |                8 |             28 |
+|  clk_wiz/inst/clk_out1              | vgac/v_count_en                       | vgac/v_count_reg[16]_i_1_n_0               |                4 |             32 |
+|  clk_wiz/inst/clk_25                | mouse/y_mouse_v[8]_i_1_n_0            | dbp/clrp                                   |                5 |             36 |
+|  clk_wiz/inst/clk_25                | mouse/x_mouse_d                       | dbp/clrp                                   |                6 |             36 |
+|  clk_wiz/inst/clk_25                |                                       | dbp/clrp                                   |                4 |             36 |
+|  vgac/i_countscore_reg_reg[18]_3[0] |                                       |                                            |                8 |             38 |
+|  clk_100M_IBUF                      |                                       |                                            |                5 |             40 |
+|  clk_wiz/inst/clk_25                | mouse/shift2                          | dbp/clrp                                   |                7 |             42 |
+|  clk_wiz/inst/clk_out1              | vgac/ball_xstart_next_2               | clear_IBUF                                 |               10 |             60 |
+|  clk_wiz/inst/clk_out1              | vgac/ball_xstart_next                 | clear_IBUF                                 |                9 |             60 |
+|  clk_wiz/inst/clk_out1              | vgac/ball_xstart_next_3               | clear_IBUF                                 |               10 |             60 |
+|  clk_wiz/inst/clk_out1              | vgac/refr_tick_0                      | player/player_ystart_delta_reg[16]_i_1_n_0 |                9 |             60 |
+|  clk_wiz/inst/clk_out1              | vgac/ball_xstart_next_1               | clear_IBUF                                 |               10 |             68 |
+|  clk_wiz/inst/clk_out1              |                                       | vgac/v_count_en                            |               22 |            108 |
+|  clk_wiz/inst/clk_out1              | vgac/E[0]                             |                                            |               88 |            512 |
+|  clk_wiz/inst/clk_out1              | vgac/doutb1_up_lsb_reg[7][0]          |                                            |               81 |            512 |
+|  clk_wiz/inst/clk_out1              | vgac/doutb1_down_msb_reg[4]_0[0]      |                                            |               82 |            512 |
+|  clk_wiz/inst/clk_out1              | vgac/doutb1_down_msb_reg[4][0]        |                                            |               80 |            512 |
+|  clk_wiz/inst/clk_out1              | vgac/doutb1_down_lsb_reg[7][0]        |                                            |               78 |            512 |
+|  clk_wiz/inst/clk_out1              | vgac/doutb1_up_msb_reg[0][0]          |                                            |               80 |            512 |
+|  clk_wiz/inst/clk_out1              | vgac/doutb1_up_msb_reg[7][0]          |                                            |              171 |           1024 |
+|  clk_wiz/inst/clk_out1              | vgac/doutb1_down_msb_reg[7][0]        |                                            |              176 |           1024 |
+|  clk_wiz/inst/clk_out1              |                                       |                                            |              381 |           2206 |
++-------------------------------------+---------------------------------------+--------------------------------------------+------------------+----------------+
+
+
